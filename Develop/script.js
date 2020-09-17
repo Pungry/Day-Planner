@@ -1,5 +1,3 @@
-console.log("Hello");
-
 var hoursPassed = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 var nineAM = $("#9AM");
 var tenAM = $("#10AM");
@@ -19,6 +17,16 @@ var twoSave = $("#2Save");
 var threeSave = $("#3Save");
 var fourSave = $("#4Save");
 var fiveSave = $("#5Save");
+var nineText = $("#9Text");
+var tenText = $("#10Text");
+var elevenText = $("#11Text");
+var twelveText = $("#12Text");
+var oneText = $("#1Text");
+var twoText = $("#2Text");
+var threeText = $("#3Text");
+var fourText = $("#4Text");
+var fiveText = $("#5Text");
+
 
 // GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
@@ -203,79 +211,104 @@ for (var i = 0; i < hoursPassed.length; i++)
         $("#5PM").attr("class", "time-block hour row description future");
         }
     }
-};
+}
 
 // WHEN I click into a timeblock
 // THEN I can enter an event
-//On click, allow user to enter in text
+//On click, allow user to enter in text; if you don't figure it out, write in prompts lol
 
-nineAM.click(function()
-{
-    console.log("9AM");
-});
-tenAM.click(function()
-{
+// nineAM.click(function()
+// {
+//     console.log("9AM");
+// });
+// tenAM.click(function()
+// {
 
-});
-elevenAM.click(function(){
+// });
+// elevenAM.click(function(){
 
-});
-twelvePM.click(function(){
+// });
+// twelvePM.click(function(){
 
-});
-onePM.click(function(){
+// });
+// onePM.click(function(){
 
-});
-twoPM.click(function(){
+// });
+// twoPM.click(function(){
 
-});
-threePM.click(function(){
+// });
+// threePM.click(function(){
 
-});
-fourPM.click(function(){
+// });
+// fourPM.click(function(){
 
-});
-fivePM.click(function(){
+// });
+// fivePM.click(function(){
 
-});
+// });
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
-//On click of save button, allow that text to be saved to localStorage
+//On click of save button, allow that text to be saved to localStorage. The final line in each code also updates the text content of the hour when clicked.
 nineSave.click(function()
 {
-    console.log("Save 9AM");
-    //set item in localStorage equal to the text in the text area on click
-    //localStorage.setItem("");
+    var newText = document.getElementById("9Text").value;
+    localStorage.setItem("9 AM", newText);
+    document.getElementById("9AM").textContent = "9 AM: " + localStorage.getItem("9 AM");
 });
 tenSave.click(function(){
-
+    var newText = document.getElementById("10Text").value;
+    localStorage.setItem("10 AM", newText);
+    console.log(localStorage.getItem("10 AM"));
+    document.getElementById("10AM").textContent = "10 AM: " + localStorage.getItem("10 AM");
 })
 elevenSave.click(function(){
-    
+    var newText = document.getElementById("11Text").value;
+    localStorage.setItem("11 AM", newText);
+    document.getElementById("11AM").textContent = "11 AM: " + localStorage.getItem("11 AM");
 })
 twelveSave.click(function(){
-    
+    var newText = document.getElementById("12Text").value;
+    localStorage.setItem("12 PM", newText);
+    document.getElementById("12PM").textContent = "12 PM: " + localStorage.getItem("12 PM");
 })
 oneSave.click(function(){
-    
+    var newText = document.getElementById("1Text").value;
+    localStorage.setItem("1 PM", newText);
+    document.getElementById("1PM").textContent = "1 PM: " + localStorage.getItem("1 PM");
 })
 twoSave.click(function(){
-    
+    var newText = document.getElementById("2Text").value;
+    localStorage.setItem("2 PM", newText);
+    document.getElementById("2PM").textContent = "2 PM: " + localStorage.getItem("2 PM");
 })
 threeSave.click(function(){
-    
+    var newText = document.getElementById("3Text").value;
+    localStorage.setItem("3 PM", newText);
+    document.getElementById("3PM").textContent = "3 PM: " + localStorage.getItem("3 PM");
 })
 fourSave.click(function(){
-    
+    var newText = document.getElementById("4Text").value;
+    localStorage.setItem("4 PM", newText);
+    document.getElementById("4PM").textContent = "4 PM: " + localStorage.getItem("4 PM");
 })
 fiveSave.click(function(){
-    
+    var newText = document.getElementById("5Text").value;
+    localStorage.setItem("5 PM", newText);
+    document.getElementById("5PM").textContent = "5 PM: " + localStorage.getItem("5 PM");
 })
 // WHEN I refresh the page
 // THEN the saved events persist
-// Print out saved text from local storage but only for those blocks
+// Print outs saved text from local storage.
 function printStorage() {
-    console.log("Print local storage");
+    document.getElementById("9AM").textContent = "9 AM: " + localStorage.getItem("9 AM");
+    document.getElementById("10AM").textContent = "10 AM: " + localStorage.getItem("10 AM");
+    document.getElementById("11AM").textContent = "11 AM: " + localStorage.getItem("11 AM");
+    document.getElementById("12PM").textContent = "12 PM: " + localStorage.getItem("12 PM");
+    document.getElementById("1PM").textContent = "1 PM: " + localStorage.getItem("1 PM");
+    document.getElementById("2PM").textContent = "2 PM: " + localStorage.getItem("2 PM");
+    document.getElementById("3PM").textContent = "3 PM: " + localStorage.getItem("3 PM");
+    document.getElementById("4PM").textContent = "4 PM: " + localStorage.getItem("4 PM");
+    document.getElementById("5PM").textContent = "5 PM: " + localStorage.getItem("5 PM");
 }
 
 printStorage();
