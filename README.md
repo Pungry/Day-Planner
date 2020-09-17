@@ -1,1 +1,5 @@
-# Day-Planner
+This is a simple day planner to help you plan out your typical business day. Clicking the gray box to the left of an hour block lets you type what is happening at a certain hour, and then clicking the save button below the gray box will save your event for future reference. As the day passes, the hour blocks where you write your events will turn from green, to red, to gray. When an hour block is green, that means it has not yet reached that time. When an hour block is red, that means it is currently that hour. And when an hour block is gray, that hour block has passed. When you close the app and come back to it, all events you have saved will still be there. This is especially useful if you have a recurring event at the same time every day. I hope that you only work from 9-5 because any longer is too long. Power to the people.
+
+You can find the app at: https://pungry.github.io/Day-Planner/
+
+Screenshot: ![Image of Day Planner](https://i.imgur.com/bFjDSnI.png)
