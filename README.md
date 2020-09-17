@@ -2,4 +2,4 @@ This is a simple day planner to help you plan out your typical business day. Cli
 
 You can find the app at: https://pungry.github.io/Day-Planner/
 
-Screenshot: ![Image of Day Planner](https://i.imgur.com/bFjDSnI.png)
+Screenshot: ![Image of Day Planner](https://i.imgur.com/f2poFGN.png)
